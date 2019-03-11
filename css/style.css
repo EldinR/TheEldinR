@@ -1,0 +1,360 @@
+/* === SCSS file of EldinR website === */
+/* === SCSS Colors of EldinR website === */
+/* === SCSS Font of EldinR website === */
+/* === SCSS General rules of EldinR website === */
+/* === SCSS Modals of EldinR website === */
+a.lightbox img {
+  width: 200px;
+  border: 3px solid white;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  margin: 20px 20px 20px 20px;
+  height: 200px;
+}
+
+.lightbox-target {
+  position: absolute;
+  top: -100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden;
+  left: 0;
+}
+
+.lightbox-target img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 0%;
+  max-width: 0%;
+  border: 3px solid white;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+a.lightbox {
+  color: white;
+}
+
+a.lightbox-close {
+  display: block;
+  width: 50px;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: white;
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  top: -80px;
+  right: 0;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+a.lightbox-close:before {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+a.lightbox-close:after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.lightbox-target:target {
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+}
+
+.lightbox-target:target img {
+  max-height: 100%;
+  max-width: 100%;
+  z-index: 99999;
+}
+
+.lightbox-target:target a.lightbox-close {
+  top: 0px;
+}
+
+/* Modal for contact form */
+.modalBox {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modalBox:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalBox > div {
+  width: 620px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px;
+  background: #fff;
+}
+
+.closeWindow {
+  float: right;
+}
+
+@media screen and (max-width: 980px) {
+  .lightbox-target:target img {
+    max-height: 85%;
+  }
+}
+
+/* === SCSS Responsivness of EldinR website === */
+/* === SCSS Modals of EldinR website === */
+#contact-area {
+  width: 600px;
+  margin-top: 25px;
+}
+
+#contact-area input, #contact-area textarea {
+  padding: 5px;
+  width: 471px;
+  font-size: 1.4em;
+  margin: 0px 0px 10px 0px;
+}
+
+#contact-area textarea {
+  height: 90px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+  border: 2px solid #900;
+}
+
+#contact-area input.er-button {
+  width: 100px;
+  float: right;
+}
+
+label {
+  float: left;
+  text-align: right;
+  margin-right: 15px;
+  width: 100px;
+  padding-top: 5px;
+  font-size: 17px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+#main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+#main .left {
+  width: 30%;
+  padding: 20px;
+  float: left;
+}
+
+@media (max-width: 980px) {
+  #main .left {
+    width: 100%;
+  }
+}
+
+#main .left .er-pic {
+  width: 80%;
+  margin: auto;
+  display: block;
+  border: 1px solid #efefef;
+  border-radius: 50%;
+}
+
+@media (max-width: 980px) {
+  #main .left .er-pic {
+    max-width: 50%;
+  }
+}
+
+#main .left .er-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  color: #37A000;
+}
+
+#main .left .er-stitles {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+}
+
+#main .left .outer-ul {
+  text-align: center;
+}
+
+#main .left .outer-ul .er-links {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#main .left .outer-ul .er-links li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#main .left .er-line {
+  width: 70%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#37A000), color-stop(50%, white), color-stop(120%, #37A000));
+  background-image: linear-gradient(to right, #37A000 0%, white 50%, #37A000 120%);
+  height: 2px;
+  border: none;
+}
+
+#main .left .er-skills-list,
+#main .left .er-lang-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#main .left .er-skills-list li,
+#main .left .er-lang-list li {
+  margin-bottom: 5px;
+  background: #efefef38;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+#main .left .er-skills-list li .er-span,
+#main .left .er-lang-list li .er-span {
+  position: relative;
+  top: 5px;
+  padding-right: 5px;
+}
+
+#main .left .er-button {
+  border: none;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 17px;
+  border-radius: 1px;
+  background-color: #37A000;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  -webkit-box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#main .left .er-button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#main .left .er-button:hover {
+  background-color: white;
+  color: #37A000;
+}
+
+#main .left .er-button:hover a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#main .right {
+  width: 70%;
+  float: right;
+}
+
+@media (max-width: 980px) {
+  #main .right {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+#main .right h2 {
+  text-align: center;
+}
+
+#main .right .er-line {
+  width: 70%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#37A000), color-stop(50%, white), color-stop(120%, #37A000));
+  background-image: linear-gradient(to right, #37A000 0%, white 50%, #37A000 120%);
+  height: 2px;
+  border: none;
+}
+
+#main .right .blur {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 980px) {
+  #main .right .outer-gallery {
+    text-align: center;
+  }
+}
+
+#main .right .er-contact p {
+  text-align: center;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

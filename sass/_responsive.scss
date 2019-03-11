@@ -1,0 +1,9 @@
+/* === SCSS Responsivness of EldinR website === */
+
+$responsive: 980px;
+
+@mixin responsive {
+    @media (max-width: #{$responsive}) {
+        @content;
+    }
+} 

@@ -1,0 +1,182 @@
+/* === SCSS file of EldinR website === */
+
+@import 'colors';
+@import 'fonts';
+@import 'general';
+@import 'modals';
+@import 'responsive';
+@import 'contact';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body { 
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow: auto;
+}
+
+#main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-top: 30px;
+
+    .left {
+        width: 30%;
+        padding: $padding;
+        float: $left;
+
+        @include responsive{
+            width: 100%;
+        }
+
+        .er-pic {
+            width: 80%;
+            margin: auto;
+            display: block;
+            border: 1px solid $bg;
+            border-radius: 50%;
+
+            @include responsive {
+                max-width: 50%;
+            }
+        }
+
+        .er-title {
+            font-family: $title;
+            font-weight: bold;
+            font-size: $titleSize;
+            text-align: $center;
+            color: $green;
+        }
+
+        .er-stitles {
+            font-family: $font;
+            font-size: $fontSize;
+            text-align: $center;
+            font-weight: 500;
+        }
+
+        .outer-ul {
+            text-align: $center;
+        
+            .er-links {
+                display: inline-flex;
+                list-style-type: none;
+                padding-left: 0;
+        
+                li {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
+
+        .er-line {
+            width: 70%;
+            background-image: linear-gradient(to right, #37A000 0%, white 50%, #37A000 120%);
+            height: 2px;
+            border: none;
+        }
+
+        .er-skills-list,
+        .er-lang-list {
+            list-style-type: none;
+            padding-left: 0;
+
+            li {
+                margin-bottom: 5px;
+                background: #efefef38;
+                padding-bottom: 5px;
+                padding-left: 5px;
+
+                .er-span {
+                    position: relative;
+                    top: 5px;
+                    padding-right: 5px;
+                }
+            }
+        }
+
+        .er-button {
+            border: none;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 17px;
+            border-radius: 1px;
+            background-color: $green;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-family: $font;
+            box-shadow: 0 5px 12px rgba(0,0,0,.2);
+            margin-top: 20px;
+            cursor: pointer;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+        
+        .er-button:hover {
+            background-color: white;
+            color: $green;
+
+            a {
+                color:inherit;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    .right {
+        width: 70%;
+        float: $right;
+
+        @include responsive {
+            width: 100%;
+            padding: $padding;
+        }
+
+        h2 {
+            text-align: $center;
+        }
+
+        .er-line {
+            width: 70%;
+            background-image: linear-gradient(to right, #37A000 0%, white 50%, #37A000 120%);
+            height: 2px;
+            border: none;
+        }
+
+        .blur {
+            color: transparent;
+            text-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+
+        .outer-gallery {
+            @include responsive {
+                text-align: $center;
+            }
+        }
+
+        .er-contact {
+            p {
+                text-align: $center;
+            }
+        }
+    }
+}
+
+footer {
+    clear: both;
+    text-align: center;
+}
+
+
